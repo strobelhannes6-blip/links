@@ -3,242 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hannes Tradevesting</title>
-<meta name="description" content="Daytrading, Momentum und Krypto mit Hannes. Community, Broker, Impressum und Transparenz.">
-<meta name="theme-color" content="#0a0c10">
+<title>Hannes Tradevesting – Links</title>
+<meta name="description" content="Aktien, Krypto und Daytrading mit Hannes. Community, Impressum und Transparenz.">
 <!-- Bewusst ohne externe Schriften, Tracking oder Cookies: keine Drittanbieter-Anfragen. -->
 <style>
   :root {
-    --bg: #0a0c10;
-    --panel: #0f1218;
-    --line: #1d222c;
-    --line-strong: #2a313d;
-    --text: #e8ecf2;
-    --muted: #7d8796;
-    --dim: #4f5866;
-    --accent: #4da3ff;
-    --up: #2ecc71;
-    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --bg: #071a33;
+    --bg2: #0b2a52;
+    --card: rgba(255,255,255,0.06);
+    --card-hover: rgba(255,255,255,0.11);
+    --line: rgba(160,200,255,0.18);
+    --text: #eef4ff;
+    --muted: #9fb6d6;
+    --accent: #5fb3ff;
+    --accent-strong: #2f8cff;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html { scroll-behavior: smooth; }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: var(--sans); line-height: 1.5;
-    background-image: linear-gradient(var(--line) 1px, transparent 1px);
-    background-size: 100% 48px;
-    background-position: 0 -1px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 700px at 50% -10%, var(--bg2), var(--bg) 60%) fixed, var(--bg);
+    line-height: 1.5;
   }
-  main { max-width: 520px; margin: 0 auto; padding: 0 16px 48px; background: var(--bg); min-height: 100vh;
-         border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
-  a { color: inherit; }
-
-  /* Kopfzeile wie ein Terminal-Statusbalken */
-  .bar {
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted); padding: 14px 0; border-bottom: 1px solid var(--line);
+  main { max-width: 560px; margin: 0 auto; padding: 40px 16px 56px; }
+  header { text-align: center; }
+  .avatar {
+    width: 112px; height: 112px; border-radius: 50%;
+    border: 3px solid var(--accent); box-shadow: 0 0 0 6px rgba(95,179,255,0.12);
+    object-fit: cover;
   }
-  .live { display: inline-flex; align-items: center; gap: 7px; color: var(--up); }
-  .live::before {
-    content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--up);
-    box-shadow: 0 0 0 3px rgba(46,204,113,0.15); animation: pulse 2.4s ease-in-out infinite;
+  h1 { font-size: 1.45rem; margin: 14px 0 2px; letter-spacing: 0.01em; }
+  .handle { color: var(--muted); margin: 0; font-size: 0.95rem; }
+  .tags { margin: 12px 0 0; color: var(--text); font-size: 0.98rem; }
+  .tags span { white-space: nowrap; }
+
+  .links { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
+  .links a {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 18px; border-radius: 14px;
+    background: var(--card); border: 1px solid var(--line);
+    color: var(--text); text-decoration: none;
+    transition: background .15s ease, transform .15s ease;
   }
-  @keyframes pulse { 50% { opacity: .35; } }
-  @media (prefers-reduced-motion: reduce) { .live::before { animation: none; } }
-
-  .profile { display: grid; grid-template-columns: 76px 1fr; gap: 16px; align-items: center; padding: 28px 0 22px; }
-  .avatar { width: 76px; height: 76px; border-radius: 14px; object-fit: cover; border: 1px solid var(--line-strong); }
-  h1 { margin: 0; font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
-  h1 span { color: var(--dim); font-weight: 500; }
-  .handle { margin: 4px 0 0; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
-
-  .stats { display: grid; grid-template-columns: 0.9fr 1fr 1.25fr; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-  .stats div { padding: 10px 12px; border-right: 1px solid var(--line); }
-  .stats div:last-child { border-right: 0; }
-  .stats dt { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim); }
-  .stats dd { margin: 2px 0 0; font-size: 14px; font-weight: 600; white-space: nowrap; }
-
-  .group { margin-top: 30px; }
-  .group-head {
-    display: flex; justify-content: space-between; align-items: baseline;
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim);
-    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  .links a:hover, .links a:focus-visible { background: var(--card-hover); transform: translateY(-1px); outline: none; }
+  .links a.primary { background: linear-gradient(135deg, var(--accent-strong), #1b5fd1); border-color: transparent; }
+  .links a.primary:hover { filter: brightness(1.08); }
+  .links .icon { font-size: 1.35rem; width: 28px; text-align: center; flex: none; }
+  .links .label { font-weight: 600; display: block; }
+  .links .sub { font-size: 0.85rem; color: var(--muted); display: block; }
+  .links a.primary .sub { color: #d8e9ff; }
+  .badge {
+    margin-left: auto; flex: none; font-size: 0.75rem; font-weight: 600;
+    padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,0.18);
   }
-  .rows { list-style: none; margin: 0; padding: 0; }
-  .rows a {
-    display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center;
-    padding: 15px 4px; border-bottom: 1px solid var(--line); text-decoration: none;
-    transition: background .15s ease, padding .15s ease;
-  }
-  .rows a:hover, .rows a:focus-visible { background: var(--panel); padding-left: 10px; outline: none; }
-  .idx { font-family: var(--mono); font-size: 12px; color: var(--dim); }
-  .t { display: block; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
-  .s { display: block; font-size: 13px; color: var(--muted); margin-top: 1px; }
-  .arrow { font-family: var(--mono); color: var(--dim); font-size: 15px; transition: color .15s ease, transform .15s ease; }
-  .rows a:hover .arrow { color: var(--accent); transform: translate(2px,-2px); }
 
-  .rows a.hero { border-left: 2px solid var(--accent); padding-left: 10px; background: linear-gradient(90deg, rgba(77,163,255,0.08), transparent 70%); }
-  .rows a.hero .idx { color: var(--accent); }
-  .chip {
-    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
-    padding: 4px 8px; border-radius: 6px; white-space: nowrap;
+  .links-title { margin: 30px 0 0; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .links.brokers { margin-top: 10px; }
+  .ad { margin-left: auto; flex: none; font-size: 0.72rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); color: #fff; }
+  .ad-note { margin: 8px 2px 0; font-size: 0.8rem; color: var(--muted); }
+  .notice {
+    margin: 22px 0 0; padding: 12px 14px; border-radius: 12px;
+    background: rgba(255,196,0,0.08); border: 1px solid rgba(255,196,0,0.25);
+    font-size: 0.88rem; color: #f3e3b0;
   }
-  .chip.date { color: var(--accent); border: 1px solid rgba(77,163,255,0.4); }
-  .chip.ad { color: var(--muted); border: 1px solid var(--line-strong); }
 
-  .fine { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
-  .risk { margin-top: 26px; padding: 12px 14px; border: 1px solid var(--line); border-left: 2px solid #e0a23a; border-radius: 0 8px 8px 0; font-size: 13px; color: #c9cfd8; }
-  .risk b { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #e0a23a; display: block; margin-bottom: 2px; }
-
-  details { border-bottom: 1px solid var(--line); }
-  summary {
-    list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 4px; font-weight: 600; font-size: 15px;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; font-family: var(--mono); color: var(--dim); font-size: 16px; }
-  details[open] summary::after { content: "–"; }
-  .doc { padding: 0 4px 18px; }
-  .doc h3 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 16px 0 4px; font-weight: 500; }
-  .doc p, .doc li { font-size: 14px; color: #c3cad4; margin: 4px 0; }
-  .doc ul { padding-left: 18px; margin: 4px 0; }
-  .doc a { color: var(--accent); }
+  section { margin-top: 44px; padding-top: 8px; border-top: 1px solid var(--line); }
+  section h2 { font-size: 1.15rem; margin: 18px 0 8px; }
+  section h3 { font-size: 0.98rem; margin: 18px 0 4px; color: var(--accent); }
+  section p, section li { color: #d5e2f5; font-size: 0.93rem; }
+  section ul { padding-left: 20px; margin: 6px 0; }
+  .placeholder { background: rgba(255,90,90,0.18); border-radius: 4px; padding: 0 4px; color: #ffd0d0; }
   address { font-style: normal; }
-
-  footer { margin-top: 32px; font-family: var(--mono); font-size: 11px; color: var(--dim); display: flex; justify-content: space-between; letter-spacing: 0.04em; }
-  footer a { color: var(--dim); }
+  a.inline { color: var(--accent); }
+  footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 0.8rem; }
+  footer a { color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <div class="bar">
-    <span>Hannes / Tradevesting</span>
-    <span class="live">Community ab 01.11.</span>
-  </div>
-
-  <header class="profile">
-    <img class="avatar" src="avatar.jpg" alt="Profilbild Hannes Tradevesting" width="76" height="76">
-    <div>
-      <h1>Hannes <span>|</span> Investing</h1>
-      <p class="handle">@hannes.tradevesting</p>
-    </div>
+  <header>
+    <img class="avatar" src="avatar.jpg" alt="Profilbild Hannes Tradevesting" width="112" height="112">
+    <h1>Hannes | Investing</h1>
+    <p class="handle">@hannes.tradevesting</p>
+    <p class="tags">
+      <span>📈 3+ Jahre an der Börse</span><br>
+      <span>⚡️ Daytrading • Momentum • Krypto</span>
+    </p>
   </header>
 
-  <dl class="stats">
-    <div><dt>Börse</dt><dd>3+ Jahre</dd></div>
-    <div><dt>Stil</dt><dd>Daytrading</dd></div>
-    <div><dt>Märkte</dt><dd>Aktien · Krypto</dd></div>
-  </dl>
+  <ul class="links">
+    <li>
+      <a class="primary" href="https://discord.gg/9suBQRPb2a" rel="noopener">
+        <span class="icon">👥</span>
+        <span><span class="label">Discord-Community</span><span class="sub">Jetzt beitreten – offizieller Start am 01.11.2026</span></span>
+        <span class="badge">Neu</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/hannes.tradevesting/" rel="noopener">
+        <span class="icon">📸</span>
+        <span><span class="label">Instagram</span><span class="sub">Reels zu Aktien, Krypto &amp; Trading</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#transparenz">
+        <span class="icon">🔎</span>
+        <span><span class="label">Transparenz</span><span class="sub">Wie ich arbeite, Positionen, Werbung</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#impressum">
+        <span class="icon">📄</span>
+        <span><span class="label">Impressum &amp; Datenschutz</span></span>
+      </a>
+    </li>
+  </ul>
 
-  <div class="group">
-    <div class="group-head"><span>Links</span><span>03</span></div>
-    <ul class="rows">
-      <li>
-        <a class="hero" href="https://discord.gg/9suBQRPb2a" rel="noopener">
-          <span class="idx">01</span>
-          <span><span class="t">Discord-Community</span><span class="s">Jetzt beitreten, offizieller Start am 01.11.2026</span></span>
-          <span class="chip date">Beitreten</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/hannes.tradevesting/" rel="noopener">
-          <span class="idx">02</span>
-          <span><span class="t">Instagram</span><span class="s">Reels zu Daytrading, Aktien &amp; Krypto</span></span>
-          <span class="arrow">↗</span>
-        </a>
-      </li>
-      <li>
-        <a href="#transparenz" onclick="document.getElementById('transparenz').open = true">
-          <span class="idx">03</span>
-          <span><span class="t">Transparenz</span><span class="s">Wie ich arbeite, Positionen, Werbung</span></span>
-          <span class="arrow">↓</span>
-        </a>
-      </li>
+  <p class="links-title">Meine Broker</p>
+  <ul class="links brokers">
+    <li>
+      <a href="https://www.smartbrokerplus.de/de-de/freunde-werben/?pid=User_invite&amp;c=refer_a_friend&amp;cr_id=0e4d02fa2746ffa0e68e438e695e13cdb8d5b73c9b70a5197f4e670bb76088e5" rel="sponsored noopener">
+        <span class="icon">🏦</span>
+        <span><span class="label">Smartbroker+*</span><span class="sub">Hier handle ich Aktien · Startprämie laut Smartbroker+-Bedingungen</span></span>
+        <span class="ad">Werbung</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://join.robinhood.com/eu_crypto/hanness-62cbdf/" rel="sponsored noopener">
+        <span class="icon">🪙</span>
+        <span><span class="label">Robinhood Crypto*</span><span class="sub">Hier handle ich Krypto · Startprämie laut Robinhood-Bedingungen</span></span>
+        <span class="ad">Werbung</span>
+      </a>
+    </li>
+  </ul>
+  <p class="ad-note">* Affiliate-Links: Wenn du dich darüber anmeldest, erhalte ich eine Prämie. Für dich entstehen keine Mehrkosten. Aktien und Krypto können stark schwanken, ein Totalverlust ist möglich.</p>
+
+  <p class="notice">⚠️ Keine Anlageberatung. Ich teile Bildungsinhalte und meine persönliche Meinung. Investieren und Trading sind mit Risiken bis zum Totalverlust verbunden.</p>
+
+  <section id="transparenz">
+    <h2>Transparenz</h2>
+
+    <h3>Wer schreibt hier?</h3>
+    <p>Hannes Strobel, Privatanleger, keine Ausbildung als Anlageberater. Kontakt und Anschrift: siehe <a class="inline" href="#impressum">Impressum</a>.</p>
+
+    <h3>Was das hier ist und was nicht</h3>
+    <p>Ich teile meine persönliche Meinung und Analysen zu Aktien, ETFs und Kryptowerten. Das ist <strong>keine Anlageberatung</strong>. Ich kenne deine persönliche Situation nicht und gebe keine individuellen Empfehlungen, auch nicht per Direktnachricht oder im Discord. Prüfe jede Entscheidung selbst oder hol dir unabhängigen Rat.</p>
+
+    <h3>Wie ich arbeite</h3>
+    <ul>
+      <li>Ich trenne Fakten (mit Quelle) von meiner Meinung und kennzeichne Prognosen als Prognosen.</li>
+      <li>Bewertungsmethode: Chartanalyse mit Unterstützungen und Widerständen sowie Momentum.</li>
+      <li>Jeder Post zu einem konkreten Wert trägt Datum und Uhrzeit.</li>
     </ul>
-  </div>
 
-  <div class="group">
-    <div class="group-head"><span>Meine Broker</span><span>Werbung · Affiliate</span></div>
-    <ul class="rows">
-      <li>
-        <a href="https://www.smartbrokerplus.de/de-de/freunde-werben/?pid=User_invite&amp;c=refer_a_friend&amp;cr_id=0e4d02fa2746ffa0e68e438e695e13cdb8d5b73c9b70a5197f4e670bb76088e5" rel="sponsored noopener">
-          <span class="idx">A</span>
-          <span><span class="t">Smartbroker+*</span><span class="s">Mein Depot für Aktien · Startprämie laut Bedingungen</span></span>
-          <span class="chip ad">Werbung</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://join.robinhood.com/eu_crypto/hanness-62cbdf/" rel="sponsored noopener">
-          <span class="idx">B</span>
-          <span><span class="t">Robinhood Crypto*</span><span class="s">Mein Konto für Krypto · Startprämie laut Bedingungen</span></span>
-          <span class="chip ad">Werbung</span>
-        </a>
-      </li>
+    <h3>Meine Positionen und Interessenkonflikte</h3>
+    <ul>
+      <li>Wenn ich über einen Wert spreche, sage ich immer dazu, ob ich ihn halte – auch beim Live-Trading.</li>
+      <li>Bei sehr kleinen Werten (Small Caps, Microcap-Coins) handle ich nicht in den Minuten nach einem Post.</li>
     </ul>
-    <p class="fine">* Affiliate-Links: Wenn du dich darüber anmeldest, erhalte ich eine Prämie. Für dich entstehen keine Mehrkosten.</p>
-  </div>
 
-  <div class="risk">
-    <b>Keine Anlageberatung</b>
-    Ich teile Bildungsinhalte und meine persönliche Meinung. Aktien, Krypto und vor allem Daytrading sind riskant, ein Totalverlust ist möglich.
-  </div>
+    <h3>Werbung und Affiliate-Links</h3>
+    <p>Links mit * sind Affiliate-Links. Wenn du darüber ein Konto eröffnest, erhalte ich eine Prämie, für dich entstehen keine Mehrkosten. Kooperationen kennzeichne ich am Anfang des Posts als „Werbung“ oder „Anzeige“. Aktuelle Affiliate-Partner: Smartbroker+ (Aktien) und Robinhood Crypto (Robinhood Europe, UAB, MiCA-Lizenz der Bank of Lithuania).</p>
 
-  <div class="group">
-    <div class="group-head"><span>Rechtliches</span><span></span></div>
+    <h3>Risiken</h3>
+    <p>Wertpapiere und Kryptowerte können stark schwanken, ein Totalverlust ist möglich. Vergangene Entwicklungen sind kein verlässlicher Indikator für die Zukunft. Daytrading, Derivate, CFDs und gehebelte Produkte sind besonders riskant und können Verluste über den Einsatz hinaus verursachen.</p>
+  </section>
 
-    <details id="transparenz">
-      <summary>Transparenz</summary>
-      <div class="doc">
-        <h3>Wer schreibt hier?</h3>
-        <p>Hannes Strobel, Privatanleger, keine Ausbildung als Anlageberater. Kontakt und Anschrift: siehe Impressum.</p>
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <p>Angaben gemäß § 5 DDG</p>
+    <address>
+      Hannes Strobel<br>
+      Enzianweg 10<br>
+      89297 Roggenburg<br>
+      Deutschland
+    </address>
+    <p>E-Mail: <a class="inline" href="mailto:strobelhannes6@gmail.com">strobelhannes6@gmail.com</a></p>
+    <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>Hannes Strobel, Anschrift wie oben</p>
 
-        <h3>Was das hier ist und was nicht</h3>
-        <p>Ich teile meine persönliche Meinung und Analysen zu Aktien, ETFs und Kryptowerten. Das ist <strong>keine Anlageberatung</strong>. Ich kenne deine persönliche Situation nicht und gebe keine individuellen Empfehlungen, auch nicht per Direktnachricht oder im Discord. Prüfe jede Entscheidung selbst oder hol dir unabhängigen Rat.</p>
-
-        <h3>Wie ich arbeite</h3>
-        <ul>
-          <li>Ich trenne Fakten (mit Quelle) von meiner Meinung und kennzeichne Prognosen als Prognosen.</li>
-          <li>Bewertungsmethode: Chartanalyse mit Unterstützungen und Widerständen sowie Momentum.</li>
-          <li>Jeder Post zu einem konkreten Wert trägt Datum und Uhrzeit.</li>
-        </ul>
-
-        <h3>Positionen und Interessenkonflikte</h3>
-        <ul>
-          <li>Wenn ich über einen Wert spreche, sage ich immer dazu, ob ich ihn halte – auch beim Live-Trading.</li>
-          <li>Bei sehr kleinen Werten (Small Caps, Microcap-Coins) handle ich nicht in den Minuten nach einem Post.</li>
-        </ul>
-
-        <h3>Werbung und Affiliate-Links</h3>
-        <p>Links mit * sind Affiliate-Links. Wenn du darüber ein Konto eröffnest, erhalte ich eine Prämie, für dich entstehen keine Mehrkosten. Kooperationen kennzeichne ich am Anfang des Posts als „Werbung“ oder „Anzeige“. Aktuelle Affiliate-Partner: Smartbroker+ (Aktien) und Robinhood Crypto (Robinhood Europe, UAB, MiCA-Lizenz der Bank of Lithuania).</p>
-
-        <h3>Risiken</h3>
-        <p>Wertpapiere und Kryptowerte können stark schwanken, ein Totalverlust ist möglich. Vergangene Entwicklungen sind kein verlässlicher Indikator für die Zukunft. Daytrading, Derivate, CFDs und gehebelte Produkte sind besonders riskant und können Verluste über den Einsatz hinaus verursachen.</p>
-      </div>
-    </details>
-
-    <details id="datenschutz">
-      <summary>Datenschutz</summary>
-      <div class="doc">
-        <p>Diese Seite setzt keine Cookies, nutzt kein Tracking und lädt keine Inhalte von Drittanbietern. Die Seite wird über GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Zugriffsdaten (z. B. IP-Adresse) in Server-Logs, um die Seite auszuliefern und abzusichern. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub-Datenschutzerklärung</a>. Wenn du auf einen Link zu Discord, Instagram oder einem Broker klickst, gelten dort deren Datenschutzbestimmungen.</p>
-        <p>Verantwortlich: siehe Impressum.</p>
-      </div>
-    </details>
-
-    <section id="impressum" class="doc" style="padding-top: 6px;">
-      <h3>Impressum · Angaben gemäß § 5 DDG</h3>
-      <address>
-        <p>Hannes Strobel<br>Enzianweg 10<br>89297 Roggenburg<br>Deutschland</p>
-      </address>
-      <p>E-Mail: <a href="mailto:strobelhannes6@gmail.com">strobelhannes6@gmail.com</a></p>
-      <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Hannes Strobel, Anschrift wie oben</p>
-    </section>
-  </div>
+    <h2>Datenschutz</h2>
+    <p>Diese Seite setzt keine Cookies, nutzt kein Tracking und lädt keine Inhalte von Drittanbietern. Die Seite wird über GitHub Pages (GitHub Inc., USA) bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Zugriffsdaten (z. B. IP-Adresse) in Server-Logs, um die Seite auszuliefern und abzusichern. Details: <a class="inline" href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub-Datenschutzerklärung</a>. Wenn du auf einen Link zu Discord oder Instagram klickst, gelten dort deren Datenschutzbestimmungen.</p>
+    <p>Verantwortlich: siehe Impressum.</p>
+  </section>
 
   <footer>
-    <span>© 2026 Hannes Tradevesting</span>
-    <a href="#impressum">Impressum</a>
+    © 2026 Hannes Tradevesting · <a href="#impressum">Impressum</a> · <a href="#transparenz">Transparenz</a>
   </footer>
 </main>
 </body>
